@@ -2,11 +2,8 @@
 этапы установки/запуска UpdateMachine.v5
 
 * Настройка Master сервера
--- Надо PawerShell 4.0 или выше, проверить текущую версию можено открыв cmd PawerShell (дальше как PS) и выполнить: 
-$PSVersionTable.PSVersion
--- Открыть консоль PS с правами администратора и выполнить:
-Set-ExecutionPolicy Bypass
--- Установить всё, что находится в "_Distr"
+-- Надо PawerShell 4.0 или выше, проверить текущую версию можено открыв cmd PawerShell (дальше как PS) и выполнить:  $PSVersionTable.PSVersion
+-- Открыть консоль PS с правами администратора и выполнить: Set-ExecutionPolicy Bypass
 -- Отредактировать "_Resource\Switch_PathProjectSVN.ps1" указав пути репозитория по проектам, которые должны находиться "гдето-роядом" на дисках
 
 
@@ -30,8 +27,6 @@ get-PSSnapin –registered
 Set-PasswordEncrypted.ps1, тег: -PlainPassword
 
 
-
-
 * Настройка Slave сервера
 -- Надо PawerShell 4.0 или выше, проверить текущую версию можено открыв PS и выполнить: $PSVersionTable.PSVersion
 -- Открыть консоль PS с правами администратора и выполнить по очереди: 
@@ -46,27 +41,16 @@ get-service -computername 192.168.70.28
 
 
 ############################
-
-!!!!!  Важно !!!!!  
-После Checkout протекта, надо "руками" собрать его запустив compile-release.bat
-Для сборки проекта, необходимы компоненты  Microsoft Visual Studio
-
-
-############################
-
-
 Настройка DateBase Server стенда
 * создать DateBase c именем: _ServersLogging. И накатить в нее содержимое из "_Resource\SIMADATABASE" 
 
-
 * Имя кажбой базы, создается в соответвии её разделу и категории
 Пример: 
-		PreProd44_Kemerovo
-		PreProd44_Khakasia
+		PreProd44_name1
+		PreProd44_name2
 		
-		Test44_AltaiKrai
-		Test44_Chita
-		Test223_Kemerovo				
+		Test44_name1
+		Test44_name2				
 		
 * посмотреть версионность установленных проектов, выполняется запросом из хранимки: 
 exec  [_ServersLogging].[dbo].ProjectVersionFin
