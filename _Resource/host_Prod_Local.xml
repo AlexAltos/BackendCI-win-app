@@ -1,0 +1,11 @@
+﻿<hosts>
+  <group name="@HostsGroupName@" cert="@HostsGroupCert@" cert2012="@HostsGroupCert2012@">
+    <server type="http" name="Основной сервер">
+      <address>@HostsAddress@</address>
+      <port>@HostsPort@</port>
+      <uri>@HostsURI@</uri>
+    </server>
+    <update>@HostsUpdateURL1@</update>
+	<update>@HostsUpdateURL2@</update>
+  </group>
+</hosts>
