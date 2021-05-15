@@ -2,15 +2,12 @@
 Backend of assembly and delivery of code to stands
 
 
-﻿############################
+############################
 этапы установки/запуска UpdateMachine.v5
 
 * Настройка Master сервера
 -- Надо PawerShell 4.0 или выше, проверить текущую версию можено открыв cmd PawerShell (дальше как PS) и выполнить: 
 $PSVersionTable.PSVersion
--- Открыть консоль PS с правами администратора и выполнить:
-Set-ExecutionPolicy Bypass
--- Установить всё, что находится в "_Distr"
 -- Отредактировать "_Resource\Switch_PathProjectSVN.ps1" указав пути репозитория по проектам, которые должны находиться "гдето-роядом" на дисках
 
 
